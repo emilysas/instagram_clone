@@ -1,0 +1,7 @@
+- if @posts.any?
+  - @posts.each do |post|
+    = image_tag post.image.url(:thumb)
+- else
+  %h1 No posts yet!
+
+= link_to 'Add a photograph', new_post_path
