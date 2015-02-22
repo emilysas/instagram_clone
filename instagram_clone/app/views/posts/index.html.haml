@@ -1,6 +1,7 @@
 - if @posts.any?
   - @posts.each do |post|
     = image_tag post.image.url(:thumb)
+    %h2= link_to post.title, post_path(post)
 - else
   %h1 No posts yet!
 
