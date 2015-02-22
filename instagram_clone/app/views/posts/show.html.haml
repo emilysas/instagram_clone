@@ -8,5 +8,6 @@
       %li
         = comment.comment
         = link_to "Edit Comment", edit_post_comment_path(@post, comment)
+        = link_to "Delete Comment", post_comment_path(@post, comment), method: :delete
 = link_to 'Comment', new_post_comment_path(@post)
 
