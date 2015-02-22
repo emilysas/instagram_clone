@@ -2,6 +2,8 @@
   - @posts.each do |post|
     = image_tag post.image.url(:thumb)
     %h2= link_to post.title, post_path(post)
+    = post.comments.last.comment
+    = link_to 'Comment', new_post_comment_path(post)
 - else
   %h1 No posts yet!
 
