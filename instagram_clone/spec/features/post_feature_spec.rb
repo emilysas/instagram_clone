@@ -21,16 +21,25 @@ feature 'Post' do
   #   expect(current_path).to be('/posts/#{id}')
   # end
 
-  scenario 'user can edit posts' do
-    Post.create(image: open(Rails.root+'spec/fixtures/images/profilepic.png'), title: 'Me')
-    visit '/posts'
-    click_link 'Me'
-    click_link 'Edit Post'
-    fill_in "Title", with: "vintage hair"
-    click_button 'Create Post'
-    expect(page).to have_content "vintage hair"
-    expect(current_path).to be '/posts'
-  end
+  # scenario 'user can edit posts' do
+  #   Post.create(image: open(Rails.root+'spec/fixtures/images/profilepic.png'), title: 'Me')
+  #   visit '/posts'
+  #   click_link 'Me'
+  #   click_link 'Edit Post'
+  #   fill_in "Title", with: "vintage hair"
+  #   click_button 'Create Post'
+  #   expect(page).to have_content "vintage hair"
+  #   expect(current_path).to be '/posts'
+  # end
+
+  # scenario 'user can delete posts' do
+  #   Post.create(image: open(Rails.root+'spec/fixtures/images/profilepic.png'), title: 'Me')
+  #   visit '/posts'
+  #   click_link 'Me'
+  #   click_link 'Delete Post'
+  #   expect(page).to have_content "Post deleted successfully"
+  #   expect(current_path).to be '/posts'
+  # end
 end
 
 # Post.new :image => File.new(Rails.root + 'spec/fixtures/images/profilepic.png')
